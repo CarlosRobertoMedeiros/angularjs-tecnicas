@@ -1,0 +1,62 @@
+{
+  "contatos": [
+    {
+      "id": 1,
+      "nome": "Pedro",
+      "telefone": "9999-9999",
+      "data": "2021-03-30",
+      "cor": "blue"
+    },
+    {
+      "id": 2,
+      "nome": "Ana",
+      "telefone": "9999-8888",
+      "data": "2021-03-30",
+      "cor": "yellow"
+    },
+    {
+      "id": 3,
+      "nome": "Maria",
+      "telefone": "9999-7777",
+      "data": "2021-03-30",
+      "cor": "red"
+    }
+  ],
+  "operadoras": [
+    {
+      "id": 1,
+      "nome": "Oi",
+      "codigo": "14",
+      "categoria": "Celular",
+      "preco": 2
+    },
+    {
+      "id": 2,
+      "nome": "Vivo",
+      "codigo": "15",
+      "categoria": "Celular",
+      "preco": 2
+    },
+    {
+      "id": 3,
+      "nome": "Tim",
+      "codigo": "41",
+      "categoria": "Celular",
+      "preco": 2
+    },
+    {
+      "id": 4,
+      "nome": "GVT",
+      "codigo": "25",
+      "categoria": "Fixo",
+      "preco": 2
+    },
+    {
+      "id": 5,
+      "nome": "Embratel",
+      "codigo": "21",
+      "categoria": "Fixo",
+      "preco": 2
+    }
+  ]
+}

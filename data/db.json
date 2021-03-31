@@ -1,0 +1,83 @@
+{
+  "contatos": [
+    {
+      "id": 1,
+      "nome": "Pedro",
+      "operadora": {
+        "id": 1,
+        "nome": "Oi",
+        "codigo": "14",
+        "categoria": "Celular",
+        "preco": 2
+      },
+      "telefone": "9999-9999",
+      "data": "2021-03-30",
+      "cor": "blue"
+    },
+    {
+      "nome": "Carlos Roberto",
+      "telefone": "9999-8888",
+      "operadora": {
+        "id": 1,
+        "nome": "Oi",
+        "codigo": "14",
+        "categoria": "Celular",
+        "preco": 2
+      },
+      "serial": "U#_R#",
+      "data": "2021-03-30T19:55:21.131Z",
+      "id": 6
+    },
+    {
+      "nome": "Antonio Nunes",
+      "telefone": "4444-8888",
+      "operadora": {
+        "id": 4,
+        "nome": "GVT",
+        "codigo": "25",
+        "categoria": "Fixo",
+        "preco": 2
+      },
+      "serial": "VZW=R",
+      "data": "2021-03-30T20:01:42.891Z",
+      "id": 7
+    }
+  ],
+  "operadoras": [
+    {
+      "id": 1,
+      "nome": "Oi",
+      "codigo": "14",
+      "categoria": "Celular",
+      "preco": 2
+    },
+    {
+      "id": 2,
+      "nome": "Vivo",
+      "codigo": "15",
+      "categoria": "Celular",
+      "preco": 2
+    },
+    {
+      "id": 3,
+      "nome": "Tim",
+      "codigo": "41",
+      "categoria": "Celular",
+      "preco": 2
+    },
+    {
+      "id": 4,
+      "nome": "GVT",
+      "codigo": "25",
+      "categoria": "Fixo",
+      "preco": 2
+    },
+    {
+      "id": 5,
+      "nome": "Embratel",
+      "codigo": "21",
+      "categoria": "Fixo",
+      "preco": 2
+    }
+  ]
+}

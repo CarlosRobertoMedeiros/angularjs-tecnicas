@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="listaTelefonica">
+    <head>
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lista Telefônica</title>
+
+        <link rel="stylesheet" type="text/css" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/app.css">
+        <link rel="stylesheet" href="css/ui.css">
+        
+        <script src="../bower_components/angular/angular.min.js"></script>
+        <script src="../bower_components/angular-route/angular-route.min.js"></script>
+        <script src="lib/angular-locale_pt-br.js"></script>
+        <script src="../bower_components/angular-messages/angular-messages.min.js"></script>
+        
+        <script src="js/app.js"></script>
+
+        <script src="js/controllers/listaTelefonicaCntrl.js"></script>
+        <script src="js/controllers/novoContatoCntrl.js"></script>
+        <script src="js/controllers/detalhesContatoCntrl.js"></script>
+
+        <script src="js/services/factory/contatosAPIService.js"></script>
+        <script src="js/services/service/operadorasAPIService.js"></script>
+        <script src="js/services/provider/serialGeneratorService.js"></script>
+        <script src="js/config/routeConfig.js"></script>
+
+        <script src="js/config/serialGeneratorConfig.js"></script>
+        <script src="js/value/configValue.js"></script>
+
+        <script src="js/filters/nameFilter.js"></script>
+        <script src="js/filters/ellipsisFilter.js"></script>
+        <script src="js/filters/upperFilter.js"></script>
+        
+        <script src="js/directives/uiAlertDirective.js"></script>
+        <script src="js/directives/uiDateDirective.js"></script>
+
+        <script src="js/interceptor/timestampInteceptor.js"></script>
+        <script src="js/interceptor/errorInterceptor.js"></script>
+        <script src="js/interceptor/loadingInterceptor.js"></script>
+
+        <script src="js/config/interceptorsConfig.js"></script>
+
+    </head>
+
+    <body>
+        
+        <div class="jumbotron" ng-show="loading">
+            <h5>Carregando, por favor aguarde ....</h5>
+        </div>
+        <div ng-hide="loading">
+            <div ng-view></div>
+            <!--O aspa interno é para escapar e 
+                fazer com que o arquivo não compreenda que é um objeto do tipo escopo
+            -->
+            <div ng-include="'view/footer.html'"></div> 
+        </div>
+    </body>
+</html>
+
+<!--Continuar nos módulos de Performance 1 - a partir de 3 minutos-->

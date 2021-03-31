@@ -1,0 +1,52 @@
+'<div class="jumbotron">
+    <form name="contatoForm">
+
+        <select class="form-control" ng-model="contato.tipo">
+            <option value="">Selecione o Tipo</option>
+            <option>Pessoa Fisica</option>
+            <option>Pessoa Juridica</option>
+        </select>
+
+        <div ng-show="contato.tipo ==='Pessoa Fisica' ">
+            <input class="form-control" type="text" ng-model="contato.nome" placeholder="Nome" name="nome" ng-required="true" ng-minlength="10"/>
+            <input class="form-control" type="text" ng-model="contato.telefone" placeholder="Telefone" name="telefone" ng-required="true" ng-pattern="/^\d{4,5}-\d{4}$/" />
+        </div>
+
+        <div ng-show="contato.tipo ==='Pessoa Juridica' ">
+            <input class="form-control" type="text" ng-model="contato.nomeFantasia" placeholder="nome Fantasia" name="nome" ng-required="true" ng-minlength="10"/>
+            <input class="form-control" type="text" ng-model="contato.telefoneEmpresa" placeholder="Telefone Empresa" name="telefone" ng-required="true" ng-pattern="/^\d{4,5}-\d{4}$/" />
+        </div>
+        
+        <!--Usado Apenas para Exemplificar a Criação da Diretiva
+        <input class="form-control" type="text" ng-model="contato.data" placeholder="Data" name="data" ui-date/>
+        -->
+        
+        <select class="form-control" ng-model="contato.operadora" ng-options="operadora.nome + '('+ (operadora.preco | currency) +')'  for operadora in operadoras | orderBy:'nome'">
+            <option value="">Selecione uma operadora</option>
+        </select>
+    </form>
+
+    <div ng-show="contatoForm.nome.$dirty" ng-messages="contatoForm.nome.$error">
+        <div ng-messages="contatoForm.nome.$error" class="alert alert-danger">
+            <div ng-message="required">
+                Por favor, preencha o campo nome !
+            </div>
+            <div ng-message="minlength">
+                O campo nome deve ter no mínimo 10 caracteres !
+            </div>
+        </div>
+    </div>
+
+    <div ng-show="contatoForm.telefone.$error.required && contatoForm.telefone.$dirty" class="alert alert-danger">
+        Por favor, preencha o campo telefone !
+    </div>
+
+    <div ng-show="contatoForm.telefone.$error.pattern" class="alert alert-danger">
+        O campo telefone deve ter o formato DDDD-DDDD ou DDDDD-DDDD !
+    </div>
+
+    <hr/>
+
+    <button class="btn btn-primary btn-block" ng-click="adicionarContato(contato)" ng-disabled="contatoForm.$invalid">Adicionar Contato</button>
+    <a class="btn btn-primary btn-block" href="#/">Voltar</a>
+</div>
