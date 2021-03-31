@@ -39,3 +39,7 @@ frontend/app/bower_components
 
 ### Gradle ###
 .gradle
+
+/bower_components
+
+/node_modules
